@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card } from "react-bootstrap"
 import treasure_chest from './../img/treasure.png'
+import _ from "lodash"
 
 class LotteryCard extends React.Component {
     
@@ -17,11 +18,11 @@ class LotteryCard extends React.Component {
                   <button className="btn btn-primary float-right" onClick={() => this.props.enterLotteryMethod()}>
                     Buy Entry (1 rETH)
                   </button>
-                  {this.props.players.length} entries 
+                  {this.props.players.length} entries , {_.uniq(this.props.players).length} players
 
                   <hr />
 
-                  Last winner: {this.props.lastWinner}
+                  Last winner: <a rel="noreferrer" href={"https://ropsten.etherscan.io/address/" + this.props.lastWinner } target="_blank" >{this.props.lastWinner}</a>
           
                 </Card.Body>
               </Card>
