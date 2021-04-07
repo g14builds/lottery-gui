@@ -1,0 +1,9 @@
+.wrong-network-card {
+    border: 5px solid darkred;
+    margin-bottom: 15px;
+}
+
+.wrong-network-card h2 {
+    color: darkred;
+
+}
