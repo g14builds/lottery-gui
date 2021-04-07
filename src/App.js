@@ -39,6 +39,7 @@ class App extends React.Component {
             <Col md>
               { this.state.network === 'ropsten' 
               ? <LotteryCard 
+                  web3={web3}
                   lastWinner={this.state.lastWinner}
                   players={this.state.players} 
                   balance={this.state.balance} /> 

@@ -8,9 +8,6 @@ class LotteryCard extends React.Component {
 
     constructor(props){
         super(props);
-        this.state = {
-
-        }
     }
 
     
@@ -27,6 +24,7 @@ class LotteryCard extends React.Component {
     render(){
 
         return (
+
             <Card className="main-card">
                 <Card.Body>
                     <div className="float-right">
