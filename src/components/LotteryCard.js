@@ -1,7 +1,6 @@
 import React from 'react'
 import { Card } from "react-bootstrap"
 import treasure_chest from './../img/treasure.png'
-import web3 from './../web3'
 
 class LotteryCard extends React.Component {
     
@@ -25,8 +24,8 @@ class LotteryCard extends React.Component {
                             View Contract
                         </a>
                     </div>
-                  <img src={treasure_chest} alt="treasure chest" />
-                  <h2>Jackpot: {web3.utils.fromWei(this.props.balance.toString())} ETH</h2>
+                  <img src={treasure_chest} alt="treasure chest" height="200" width="171" />
+                  <h2>Jackpot: {this.props.balance/1000000000000000000} ETH</h2>
                   <hr />
                   <button className="float-right" onClick={() => this.props.enterLotteryMethod()}>
                     Buy Entry (1 ETH)
