@@ -24,7 +24,7 @@ class LotteryCard extends React.Component {
                             View Contract
                         </a>
                     </div>
-                  <img src={treasure_chest} alt="treasure chest" height="200" width="171" />
+                  <img src={treasure_chest} alt="treasure chest" height="171" width="200" />
                   <h2>Jackpot: {this.props.balance/1000000000000000000} ETH</h2>
                   <hr />
                   <button className="float-right" onClick={() => this.props.enterLotteryMethod()}>
