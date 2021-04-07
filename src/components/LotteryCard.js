@@ -25,10 +25,10 @@ class LotteryCard extends React.Component {
                         </a>
                     </div>
                   <img src={treasure_chest} alt="treasure chest" height="171" width="200" />
-                  <h2>Jackpot: {this.props.balance/1000000000000000000} ETH</h2>
+                  <h2>Jackpot: {this.props.balance/1000000000000000000} rETH</h2>
                   <hr />
-                  <button className="float-right" onClick={() => this.props.enterLotteryMethod()}>
-                    Buy Entry (1 ETH)
+                  <button className="btn btn-primary float-right" onClick={() => this.props.enterLotteryMethod()}>
+                    Buy Entry (1 rETH)
                   </button>
                   {this.props.players.length} entries 
 
