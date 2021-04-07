@@ -29,6 +29,18 @@ class App extends React.Component {
 
   }
 
+  async enterLottery(){
+
+    const accounts = await web3.eth.getAccounts();
+
+    console.log(accounts);
+
+    await lottery.methods.enter().send({
+    from: accounts[0],
+    value: 1000000000000000000
+    })
+}
+
 
   render() {
     return (
@@ -39,7 +51,7 @@ class App extends React.Component {
             <Col md>
               { this.state.network === 'ropsten' 
               ? <LotteryCard 
-                  web3={web3}
+                  enterLotteryMethod={this.enterLottery}
                   lastWinner={this.state.lastWinner}
                   players={this.state.players} 
                   balance={this.state.balance} /> 
