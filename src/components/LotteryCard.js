@@ -29,11 +29,19 @@ class LotteryCard extends React.Component {
         return (
             <Card className="main-card">
                 <Card.Body>
+                    <div className="float-right">
+                        <a href="//ropsten.etherscan.io/address/0xcAadC4090fb0E750336Ef816a6fd6Cf9D5B34CBF#readContract" 
+                        target="_blank" 
+                        title="Contract address: 0xcAadC4090fb0E750336Ef816a6fd6Cf9D5B34CBF"
+                        rel="noreferrer">
+                            View Contract
+                        </a>
+                    </div>
                   <img src={treasure_chest} alt="treasure chest" />
-                  <h2>Jackpot: 	&#x39E;{web3.utils.fromWei(this.props.balance.toString())}</h2>
+                  <h2>Jackpot: 	{web3.utils.fromWei(this.props.balance.toString())} ETH</h2>
                   <hr />
                   <button className="float-right" onClick={this.enterLottery}>
-                    Buy Entry
+                    Buy Entry (1 ETH)
                   </button>
                   {this.props.players.length} entries 
 
