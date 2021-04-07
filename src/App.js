@@ -45,10 +45,33 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+
+        
         <Container>
           <Row>
             <Col lg />
             <Col md>
+            <h1><sup>the</sup> Ropsten Lottery</h1>
+
+            <div className="text-center pub-buttons">
+
+            <a href="//ropsten.etherscan.io/address/0xcAadC4090fb0E750336Ef816a6fd6Cf9D5B34CBF#readContract" 
+                target="_blank" className="btn btn-outline-dark"
+                title="Contract address: 0xcAadC4090fb0E750336Ef816a6fd6Cf9D5B34CBF"
+                rel="noreferrer">
+                    View Contract
+                </a>
+
+            <a href="https://faucet.ropsten.be/" 
+                target="_blank" className="btn btn-outline-dark"
+                title="Ropsten rETH faucet"
+                rel="noreferrer">
+                    rETH Faucet
+                </a>
+                
+
+            </div>
+
               { this.state.network === 'ropsten' 
               ? <LotteryCard 
                   enterLotteryMethod={this.enterLottery}
