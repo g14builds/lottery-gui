@@ -5,11 +5,6 @@ import web3 from './../web3'
 import lottery from "./../lottery"
 
 class LotteryCard extends React.Component {
-
-    constructor(props){
-        super(props);
-    }
-
     
     async enterLottery(){
 
